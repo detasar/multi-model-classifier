@@ -12,7 +12,7 @@ You will need to have Python and the following libraries installed:
 - pandas
 - numpy
 - sklearn
-- and any other libraries that you decide to use for the preprocessing and modeling steps
+
 
 ### Installing
 
