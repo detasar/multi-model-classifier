@@ -27,3 +27,13 @@ def train_models(df):
     
     # write results to a dataframe
     results = {'Logistic Regression': logreg_acc, 'Decision Tree': dt_acc, 'Random Forest': rf_acc}
+    results_df = pd.DataFrame(results, index=['Accuracy'])
+    best_model = results_df.idxmax()[0]
+    return best_model, results_df
+
+def run_classifier(filepath, target_col):
+    df = preprocess_data(filepath)
+    best_model, results_df = train_models(df)
+    print("Best model: ", best_model)
+    print("Results: \n", results_df)
+
